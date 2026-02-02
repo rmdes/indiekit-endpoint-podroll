@@ -1,0 +1,28 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Podcast subscriptions aggregated from FreshRSS",
+    "stats": "Statistics",
+    "episodeCount": "Episodes",
+    "sourceCount": "Podcast Sources",
+    "lastEpisodesSync": "Last Episodes Sync",
+    "lastSourcesSync": "Last Sources Sync",
+    "never": "Never",
+    "configuration": "Configuration",
+    "episodesUrl": "Episodes Feed URL",
+    "opmlUrl": "OPML URL",
+    "syncInterval": "Sync Interval",
+    "minutes": "minutes",
+    "actions": "Actions",
+    "syncNow": "Sync Now",
+    "clearResync": "Clear & Re-sync",
+    "clearConfirm": "This will delete all cached episodes and sources, then re-fetch from FreshRSS. Continue?",
+    "syncSuccess": "Sync completed successfully",
+    "clearSuccess": "Data cleared and re-synced successfully",
+    "syncError": "Sync failed",
+    "apiEndpoints": "API Endpoints",
+    "apiEpisodes": "List podcast episodes (supports limit, offset, source params)",
+    "apiSources": "List podcast sources from OPML (supports category param)",
+    "apiStatus": "Sync status and counts"
+  }
+}

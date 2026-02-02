@@ -1,0 +1,93 @@
+{% extends "document.njk" %}
+
+{% block content %}
+<header class="page-header">
+  <h1 class="page-header__title">{{ __("podroll.title") }}</h1>
+  <p class="page-header__description">{{ __("podroll.description") }}</p>
+</header>
+
+{% if request.query.synced %}
+<div class="notification notification--success">
+  {{ __("podroll.syncSuccess") }}
+</div>
+{% endif %}
+
+{% if request.query.cleared %}
+<div class="notification notification--success">
+  {{ __("podroll.clearSuccess") }}
+</div>
+{% endif %}
+
+{% if request.query.error %}
+<div class="notification notification--error">
+  {{ __("podroll.syncError") }}: {{ request.query.error }}
+</div>
+{% endif %}
+
+<div class="dashboard">
+  <section class="dashboard__section">
+    <h2>{{ __("podroll.stats") }}</h2>
+    <dl class="definition-list">
+      <div class="definition-list__item">
+        <dt>{{ __("podroll.episodeCount") }}</dt>
+        <dd>{{ stats.episodeCount }}</dd>
+      </div>
+      <div class="definition-list__item">
+        <dt>{{ __("podroll.sourceCount") }}</dt>
+        <dd>{{ stats.sourceCount }}</dd>
+      </div>
+      <div class="definition-list__item">
+        <dt>{{ __("podroll.lastEpisodesSync") }}</dt>
+        <dd>{{ stats.lastEpisodesSync | date("PPpp") if stats.lastEpisodesSync else __("podroll.never") }}</dd>
+      </div>
+      <div class="definition-list__item">
+        <dt>{{ __("podroll.lastSourcesSync") }}</dt>
+        <dd>{{ stats.lastSourcesSync | date("PPpp") if stats.lastSourcesSync else __("podroll.never") }}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="dashboard__section">
+    <h2>{{ __("podroll.configuration") }}</h2>
+    <dl class="definition-list">
+      <div class="definition-list__item">
+        <dt>{{ __("podroll.episodesUrl") }}</dt>
+        <dd>{{ config.episodesUrl }}</dd>
+      </div>
+      <div class="definition-list__item">
+        <dt>{{ __("podroll.opmlUrl") }}</dt>
+        <dd>{{ config.opmlUrl }}</dd>
+      </div>
+      <div class="definition-list__item">
+        <dt>{{ __("podroll.syncInterval") }}</dt>
+        <dd>{{ (config.syncInterval / 60000) | round }} {{ __("podroll.minutes") }}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section class="dashboard__section">
+    <h2>{{ __("podroll.actions") }}</h2>
+    <div class="button-group">
+      <form method="post" action="{{ application.podrollEndpoint }}/sync" style="display: inline;">
+        <button type="submit" class="button button--primary">
+          {{ __("podroll.syncNow") }}
+        </button>
+      </form>
+      <form method="post" action="{{ application.podrollEndpoint }}/clear-resync" style="display: inline;" onsubmit="return confirm('{{ __("podroll.clearConfirm") }}');">
+        <button type="submit" class="button button--secondary">
+          {{ __("podroll.clearResync") }}
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <section class="dashboard__section">
+    <h2>{{ __("podroll.apiEndpoints") }}</h2>
+    <ul class="api-list">
+      <li><code>GET {{ application.podrollEndpoint }}/api/episodes</code> - {{ __("podroll.apiEpisodes") }}</li>
+      <li><code>GET {{ application.podrollEndpoint }}/api/sources</code> - {{ __("podroll.apiSources") }}</li>
+      <li><code>GET {{ application.podrollEndpoint }}/api/status</code> - {{ __("podroll.apiStatus") }}</li>
+    </ul>
+  </section>
+</div>
+{% endblock %}

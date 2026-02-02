@@ -1,0 +1,53 @@
+{
+  "name": "@rmdes/indiekit-endpoint-podroll",
+  "version": "1.0.0",
+  "description": "Podcast roll endpoint for Indiekit. Aggregates podcast episodes from FreshRSS, displays on frontend with OPML sidebar.",
+  "keywords": [
+    "indiekit",
+    "indiekit-plugin",
+    "indieweb",
+    "podcast",
+    "podroll",
+    "opml",
+    "rss"
+  ],
+  "homepage": "https://github.com/rmdes/indiekit-endpoint-podroll",
+  "bugs": {
+    "url": "https://github.com/rmdes/indiekit-endpoint-podroll/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmdes/indiekit-endpoint-podroll.git"
+  },
+  "author": {
+    "name": "Ricardo Mendes",
+    "url": "https://rmendes.net"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "lib",
+    "locales",
+    "views",
+    "index.js"
+  ],
+  "dependencies": {
+    "@indiekit/error": "^1.0.0-beta.25",
+    "express": "^5.0.0",
+    "sanitize-html": "^2.13.0",
+    "xml2js": "^0.6.2"
+  },
+  "peerDependencies": {
+    "@indiekit/indiekit": ">=1.0.0-beta.25"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
