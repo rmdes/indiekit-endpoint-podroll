@@ -1,83 +1,228 @@
 {% extends "document.njk" %}
 
 {% block content %}
+<style>
+  .pr-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl, 2rem);
+  }
+
+  .pr-section {
+    background: var(--color-offset, #f5f5f5);
+    border-radius: var(--border-radius-small, 0.5rem);
+    padding: var(--space-m, 1.5rem);
+  }
+
+  .pr-section h2 {
+    font: var(--font-heading, bold 1.25rem/1.4 sans-serif);
+    margin-block-end: var(--space-s, 0.75rem);
+    padding-block-end: var(--space-xs, 0.5rem);
+    border-block-end: 1px solid var(--color-outline-variant, #ddd);
+  }
+
+  .pr-section p.pr-hint {
+    color: var(--color-on-offset, #666);
+    font: var(--font-caption, 0.875rem/1.4 sans-serif);
+    margin-block-end: var(--space-m, 1rem);
+  }
+
+  .pr-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-s, 0.75rem);
+  }
+
+  .pr-stat {
+    background: var(--color-background, #fff);
+    border-radius: var(--border-radius-small, 0.5rem);
+    padding: var(--space-s, 0.75rem);
+    text-align: center;
+  }
+
+  .pr-stat dt {
+    color: var(--color-on-offset, #666);
+    font: var(--font-caption, 0.875rem/1.4 sans-serif);
+    margin-block-end: var(--space-2xs, 0.25rem);
+  }
+
+  .pr-stat dd {
+    font: var(--font-subhead, bold 1.125rem/1.4 sans-serif);
+    margin: 0;
+  }
+
+  .pr-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m, 1rem);
+  }
+
+  .pr-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs, 0.25rem);
+  }
+
+  .pr-field label {
+    font: var(--font-label, bold 0.875rem/1.4 sans-serif);
+  }
+
+  .pr-field .pr-field-hint {
+    color: var(--color-on-offset, #666);
+    font: var(--font-caption, 0.875rem/1.4 sans-serif);
+  }
+
+  .pr-field input {
+    appearance: none;
+    background-color: var(--color-background, #fff);
+    border: 1px solid var(--color-outline-variant, #ccc);
+    border-radius: var(--border-radius-small, 0.25rem);
+    font: var(--font-body, 0.875rem/1.4 sans-serif);
+    padding: calc(var(--space-s, 0.75rem) / 2) var(--space-s, 0.75rem);
+    width: 100%;
+  }
+
+  .pr-field input:focus {
+    border-color: var(--color-primary, #0066cc);
+    outline: 2px solid var(--color-primary, #0066cc);
+    outline-offset: 1px;
+  }
+
+  .pr-field-static {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: calc(var(--space-s, 0.75rem) / 2) 0;
+    border-block-start: 1px solid var(--color-outline-variant, #eee);
+  }
+
+  .pr-field-static dt {
+    color: var(--color-on-offset, #666);
+    font: var(--font-caption, 0.875rem/1.4 sans-serif);
+  }
+
+  .pr-field-static dd {
+    margin: 0;
+    font: var(--font-body, 0.875rem/1.4 sans-serif);
+  }
+
+  .pr-api-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs, 0.5rem);
+  }
+
+  .pr-api-list li {
+    background: var(--color-background, #fff);
+    border-radius: var(--border-radius-small, 0.25rem);
+    padding: var(--space-xs, 0.5rem) var(--space-s, 0.75rem);
+    font: var(--font-caption, 0.875rem/1.4 sans-serif);
+  }
+
+  .pr-api-list code {
+    font-weight: 600;
+    color: var(--color-primary, #0066cc);
+  }
+
+  .pr-notification {
+    border-radius: var(--border-radius-small, 0.25rem);
+    padding: var(--space-s, 0.75rem) var(--space-m, 1rem);
+    margin-block-end: var(--space-s, 0.75rem);
+  }
+
+  .pr-notification--success {
+    background: var(--color-success, #d4edda);
+    color: var(--color-on-success, #155724);
+  }
+
+  .pr-notification--error {
+    background: var(--color-error, #f8d7da);
+    color: var(--color-on-error, #721c24);
+  }
+</style>
+
 <header class="page-header">
   <h1 class="page-header__title">{{ __("podroll.title") }}</h1>
   <p class="page-header__description">{{ __("podroll.description") }}</p>
 </header>
 
 {% if request.query.synced %}
-<div class="notification notification--success">
+<div class="pr-notification pr-notification--success">
   {{ __("podroll.syncSuccess") }}
 </div>
 {% endif %}
 
 {% if request.query.cleared %}
-<div class="notification notification--success">
+<div class="pr-notification pr-notification--success">
   {{ __("podroll.clearSuccess") }}
 </div>
 {% endif %}
 
 {% if request.query.saved %}
-<div class="notification notification--success">
+<div class="pr-notification pr-notification--success">
   {{ __("podroll.settingsSaved") }}
 </div>
 {% endif %}
 
 {% if request.query.error %}
-<div class="notification notification--error">
+<div class="pr-notification pr-notification--error">
   {{ __("podroll.syncError") }}: {{ request.query.error }}
 </div>
 {% endif %}
 
-<div class="dashboard">
-  <section class="dashboard__section">
+<div class="pr-dashboard">
+  <section class="pr-section">
     <h2>{{ __("podroll.stats") }}</h2>
-    <dl class="definition-list">
-      <div class="definition-list__item">
+    <dl class="pr-stats-grid">
+      <div class="pr-stat">
         <dt>{{ __("podroll.episodeCount") }}</dt>
         <dd>{{ stats.episodeCount }}</dd>
       </div>
-      <div class="definition-list__item">
+      <div class="pr-stat">
         <dt>{{ __("podroll.sourceCount") }}</dt>
         <dd>{{ stats.sourceCount }}</dd>
       </div>
-      <div class="definition-list__item">
+      <div class="pr-stat">
         <dt>{{ __("podroll.lastEpisodesSync") }}</dt>
         <dd>{{ stats.lastEpisodesSync | date("PPpp") if stats.lastEpisodesSync else __("podroll.never") }}</dd>
       </div>
-      <div class="definition-list__item">
+      <div class="pr-stat">
         <dt>{{ __("podroll.lastSourcesSync") }}</dt>
         <dd>{{ stats.lastSourcesSync | date("PPpp") if stats.lastSourcesSync else __("podroll.never") }}</dd>
       </div>
     </dl>
   </section>
 
-  <section class="dashboard__section">
+  <section class="pr-section">
     <h2>{{ __("podroll.configuration") }}</h2>
-    <p class="hint">{{ __("podroll.configurationHelp") }}</p>
-    <form method="post" action="{{ application.podrollEndpoint }}/settings">
-      <div class="field">
-        <label class="field__label" for="episodesUrl">{{ __("podroll.episodesUrl") }}</label>
-        <p class="field__hint" id="episodesUrl-hint">{{ __("podroll.episodesUrlHelp") }}</p>
-        <input class="field__input" type="url" id="episodesUrl" name="episodesUrl" value="{{ config.episodesUrl }}" aria-describedby="episodesUrl-hint" placeholder="https://...">
+    <p class="pr-hint">{{ __("podroll.configurationHelp") }}</p>
+    <form method="post" action="{{ application.podrollEndpoint }}/settings" class="pr-form">
+      <div class="pr-field">
+        <label for="episodesUrl">{{ __("podroll.episodesUrl") }}</label>
+        <span class="pr-field-hint" id="episodesUrl-hint">{{ __("podroll.episodesUrlHelp") }}</span>
+        <input type="url" id="episodesUrl" name="episodesUrl" value="{{ config.episodesUrl }}" aria-describedby="episodesUrl-hint" placeholder="https://...">
       </div>
-      <div class="field">
-        <label class="field__label" for="opmlUrl">{{ __("podroll.opmlUrl") }}</label>
-        <p class="field__hint" id="opmlUrl-hint">{{ __("podroll.opmlUrlHelp") }}</p>
-        <input class="field__input" type="url" id="opmlUrl" name="opmlUrl" value="{{ config.opmlUrl }}" aria-describedby="opmlUrl-hint" placeholder="https://...">
+      <div class="pr-field">
+        <label for="opmlUrl">{{ __("podroll.opmlUrl") }}</label>
+        <span class="pr-field-hint" id="opmlUrl-hint">{{ __("podroll.opmlUrlHelp") }}</span>
+        <input type="url" id="opmlUrl" name="opmlUrl" value="{{ config.opmlUrl }}" aria-describedby="opmlUrl-hint" placeholder="https://...">
       </div>
-      <div class="field">
+      <dl class="pr-field-static">
         <dt>{{ __("podroll.syncInterval") }}</dt>
         <dd>{{ (config.syncInterval / 60000) | round }} {{ __("podroll.minutes") }}</dd>
+      </dl>
+      <div>
+        <button type="submit" class="button button--primary">
+          {{ __("podroll.saveSettings") }}
+        </button>
       </div>
-      <button type="submit" class="button button--primary">
-        {{ __("podroll.saveSettings") }}
-      </button>
     </form>
   </section>
 
-  <section class="dashboard__section">
+  <section class="pr-section">
     <h2>{{ __("podroll.actions") }}</h2>
     <div class="button-group">
       <form method="post" action="{{ application.podrollEndpoint }}/sync" style="display: inline;">
@@ -93,9 +238,9 @@
     </div>
   </section>
 
-  <section class="dashboard__section">
+  <section class="pr-section">
     <h2>{{ __("podroll.apiEndpoints") }}</h2>
-    <ul class="api-list">
+    <ul class="pr-api-list">
       <li><code>GET {{ application.podrollEndpoint }}/api/episodes</code> - {{ __("podroll.apiEpisodes") }}</li>
       <li><code>GET {{ application.podrollEndpoint }}/api/sources</code> - {{ __("podroll.apiSources") }}</li>
       <li><code>GET {{ application.podrollEndpoint }}/api/status</code> - {{ __("podroll.apiStatus") }}</li>
