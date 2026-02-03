@@ -15,7 +15,8 @@ const publicRouter = express.Router();
 const defaults = {
   mountPath: "/podrollapi",
   syncInterval: 900_000, // 15 minutes
-  maxEpisodes: 100,
+  fetchCount: 200, // Items to request from FreshRSS (nb parameter)
+  maxEpisodes: 200,
   fetchTimeout: 15_000,
   // These should be overridden in config
   episodesUrl: "",
