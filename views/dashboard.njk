@@ -18,6 +18,12 @@
 </div>
 {% endif %}
 
+{% if request.query.saved %}
+<div class="notification notification--success">
+  {{ __("podroll.settingsSaved") }}
+</div>
+{% endif %}
+
 {% if request.query.error %}
 <div class="notification notification--error">
   {{ __("podroll.syncError") }}: {{ request.query.error }}
@@ -49,20 +55,26 @@
 
   <section class="dashboard__section">
     <h2>{{ __("podroll.configuration") }}</h2>
-    <dl class="definition-list">
-      <div class="definition-list__item">
-        <dt>{{ __("podroll.episodesUrl") }}</dt>
-        <dd>{{ config.episodesUrl }}</dd>
+    <p class="hint">{{ __("podroll.configurationHelp") }}</p>
+    <form method="post" action="{{ application.podrollEndpoint }}/settings">
+      <div class="field">
+        <label class="field__label" for="episodesUrl">{{ __("podroll.episodesUrl") }}</label>
+        <p class="field__hint" id="episodesUrl-hint">{{ __("podroll.episodesUrlHelp") }}</p>
+        <input class="field__input" type="url" id="episodesUrl" name="episodesUrl" value="{{ config.episodesUrl }}" aria-describedby="episodesUrl-hint" placeholder="https://...">
       </div>
-      <div class="definition-list__item">
-        <dt>{{ __("podroll.opmlUrl") }}</dt>
-        <dd>{{ config.opmlUrl }}</dd>
+      <div class="field">
+        <label class="field__label" for="opmlUrl">{{ __("podroll.opmlUrl") }}</label>
+        <p class="field__hint" id="opmlUrl-hint">{{ __("podroll.opmlUrlHelp") }}</p>
+        <input class="field__input" type="url" id="opmlUrl" name="opmlUrl" value="{{ config.opmlUrl }}" aria-describedby="opmlUrl-hint" placeholder="https://...">
       </div>
-      <div class="definition-list__item">
+      <div class="field">
         <dt>{{ __("podroll.syncInterval") }}</dt>
         <dd>{{ (config.syncInterval / 60000) | round }} {{ __("podroll.minutes") }}</dd>
       </div>
-    </dl>
+      <button type="submit" class="button button--primary">
+        {{ __("podroll.saveSettings") }}
+      </button>
+    </form>
   </section>
 
   <section class="dashboard__section">

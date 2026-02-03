@@ -59,6 +59,9 @@ export default class PodrollEndpoint {
     // Dashboard
     protectedRouter.get("/", dashboardController.get);
 
+    // Save settings
+    protectedRouter.post("/settings", dashboardController.saveSettings);
+
     // Manual sync trigger
     protectedRouter.post("/sync", dashboardController.sync);
 
