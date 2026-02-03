@@ -1,6 +1,6 @@
 {
   "name": "@rmdes/indiekit-endpoint-podroll",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Podcast roll endpoint for Indiekit. Aggregates podcast episodes from FreshRSS, displays on frontend with OPML sidebar.",
   "keywords": [
     "indiekit",
