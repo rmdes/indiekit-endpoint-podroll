@@ -25,17 +25,17 @@
 
   {# Configuration #}
   {% call section({ title: __("podroll.configuration") }) %}
-    <p class="podroll-field__hint">{{ __("podroll.configurationHelp") }}</p>
+    <p class="hint">{{ __("podroll.configurationHelp") }}</p>
     <form method="post" action="{{ mountPath }}/settings" class="podroll-form">
       <div class="podroll-field">
-        <label for="episodesUrl">{{ __("podroll.episodesUrl") }}</label>
-        <span class="podroll-field__hint" id="episodesUrl-hint">{{ __("podroll.episodesUrlHelp") }}</span>
-        <input type="url" id="episodesUrl" name="episodesUrl" value="{{ config.episodesUrl }}" aria-describedby="episodesUrl-hint" placeholder="https://...">
+        <label class="label" for="episodesUrl">{{ __("podroll.episodesUrl") }}</label>
+        <span class="hint" id="episodesUrl-hint">{{ __("podroll.episodesUrlHelp") }}</span>
+        <input class="input" type="url" id="episodesUrl" name="episodesUrl" value="{{ config.episodesUrl }}" aria-describedby="episodesUrl-hint" placeholder="https://...">
       </div>
       <div class="podroll-field">
-        <label for="opmlUrl">{{ __("podroll.opmlUrl") }}</label>
-        <span class="podroll-field__hint" id="opmlUrl-hint">{{ __("podroll.opmlUrlHelp") }}</span>
-        <input type="url" id="opmlUrl" name="opmlUrl" value="{{ config.opmlUrl }}" aria-describedby="opmlUrl-hint" placeholder="https://...">
+        <label class="label" for="opmlUrl">{{ __("podroll.opmlUrl") }}</label>
+        <span class="hint" id="opmlUrl-hint">{{ __("podroll.opmlUrlHelp") }}</span>
+        <input class="input" type="url" id="opmlUrl" name="opmlUrl" value="{{ config.opmlUrl }}" aria-describedby="opmlUrl-hint" placeholder="https://...">
       </div>
       <dl class="podroll-field-static">
         <dt>{{ __("podroll.syncInterval") }}</dt>

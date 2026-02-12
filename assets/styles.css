@@ -39,31 +39,6 @@
   gap: var(--space-3xs);
 }
 
-.podroll-field label {
-  font-weight: var(--font-weight-semibold);
-}
-
-.podroll-field__hint {
-  color: var(--color-text-secondary);
-  font-size: var(--step--1);
-}
-
-.podroll-field input {
-  appearance: none;
-  background-color: var(--color-background);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-s);
-  font-size: var(--step--1);
-  padding: var(--space-2xs) var(--space-s);
-  width: 100%;
-}
-
-.podroll-field input:focus {
-  border-color: var(--color-accent);
-  outline: 2px solid var(--color-accent);
-  outline-offset: 1px;
-}
-
 .podroll-field-static {
   align-items: baseline;
   border-block-start: 1px solid var(--color-border);
