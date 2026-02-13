@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Претплате на подкасте сакупљене из FreshRSS",
+    "stats": "Статистика",
+    "episodeCount": "Епизоде",
+    "sourceCount": "Извори подкаста",
+    "lastEpisodesSync": "Последња синхронизација епизода",
+    "lastSourcesSync": "Последња синхронизација извора",
+    "never": "Никада",
+    "configuration": "Извори довода",
+    "configurationHelp": "URL адресе за податке о подкастима који покрећу страницу /podroll. Сачуване поставке замењују променљиве окружења.",
+    "episodesUrl": "URL JSON довода епизода",
+    "episodesUrlHelp": "URL FreshRSS greader API за епизоде подкаста",
+    "opmlUrl": "URL OPML претплата",
+    "opmlUrlHelp": "URL OPML извоза за бочну траку претплата на подкасте",
+    "saveSettings": "Сачувај поставке",
+    "settingsSaved": "Поставке успешно сачуване",
+    "syncInterval": "Интервал синхронизације",
+    "minutes": "минута",
+    "actions": "Радње",
+    "syncNow": "Синхронизуј сада",
+    "clearResync": "Обриши и поново синхронизуј",
+    "clearConfirm": "Ово ће обрисати све кеширане епизоде и изворе, затим их поново преузети. Наставити?",
+    "syncSuccess": "Синхронизација успешно завршена",
+    "clearSuccess": "Подаци обрисани и успешно поново синхронизовани",
+    "syncError": "Синхронизација није успела",
+    "apiEndpoints": "API крајње тачке",
+    "apiEpisodes": "Прикажи епизоде подкаста (подржава параметре limit, offset, source)",
+    "apiSources": "Прикажи изворе подкаста из OPML (подржава параметар category)",
+    "apiStatus": "Статус синхронизације и бројања"
+  }
+}

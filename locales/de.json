@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Podcast-Abonnements aggregiert von FreshRSS",
+    "stats": "Statistiken",
+    "episodeCount": "Episoden",
+    "sourceCount": "Podcast-Quellen",
+    "lastEpisodesSync": "Letzte Episoden-Synchronisierung",
+    "lastSourcesSync": "Letzte Quellen-Synchronisierung",
+    "never": "Nie",
+    "configuration": "Feed-Quellen",
+    "configurationHelp": "URLs für die Podcast-Daten, die die /podroll-Seite betreiben. Gespeicherte Einstellungen überschreiben Umgebungsvariablen.",
+    "episodesUrl": "Episoden JSON Feed URL",
+    "episodesUrlHelp": "FreshRSS greader API URL für Podcast-Episoden",
+    "opmlUrl": "Abonnements OPML URL",
+    "opmlUrlHelp": "OPML-Export-URL für die Podcast-Abonnements-Seitenleiste",
+    "saveSettings": "Einstellungen speichern",
+    "settingsSaved": "Einstellungen erfolgreich gespeichert",
+    "syncInterval": "Synchronisierungsintervall",
+    "minutes": "Minuten",
+    "actions": "Aktionen",
+    "syncNow": "Jetzt synchronisieren",
+    "clearResync": "Löschen & neu synchronisieren",
+    "clearConfirm": "Dadurch werden alle zwischengespeicherten Episoden und Quellen gelöscht und dann neu abgerufen. Fortfahren?",
+    "syncSuccess": "Synchronisierung erfolgreich abgeschlossen",
+    "clearSuccess": "Daten gelöscht und erfolgreich neu synchronisiert",
+    "syncError": "Synchronisierung fehlgeschlagen",
+    "apiEndpoints": "API-Endpunkte",
+    "apiEpisodes": "Podcast-Episoden auflisten (unterstützt limit, offset, source Parameter)",
+    "apiSources": "Podcast-Quellen aus OPML auflisten (unterstützt category Parameter)",
+    "apiStatus": "Synchronisierungsstatus und Zählungen"
+  }
+}

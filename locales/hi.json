@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "FreshRSS से एकत्रित पॉडकास्ट सदस्यताएं",
+    "stats": "सांख्यिकी",
+    "episodeCount": "एपिसोड",
+    "sourceCount": "पॉडकास्ट स्रोत",
+    "lastEpisodesSync": "अंतिम एपिसोड सिंक",
+    "lastSourcesSync": "अंतिम स्रोत सिंक",
+    "never": "कभी नहीं",
+    "configuration": "फ़ीड स्रोत",
+    "configurationHelp": "/podroll पृष्ठ को संचालित करने वाले पॉडकास्ट डेटा के लिए URL। सहेजी गई सेटिंग्स पर्यावरण चर को ओवरराइड करती हैं।",
+    "episodesUrl": "एपिसोड JSON फ़ीड URL",
+    "episodesUrlHelp": "पॉडकास्ट एपिसोड के लिए FreshRSS greader API URL",
+    "opmlUrl": "सदस्यता OPML URL",
+    "opmlUrlHelp": "पॉडकास्ट सदस्यता साइडबार के लिए OPML निर्यात URL",
+    "saveSettings": "सेटिंग्स सहेजें",
+    "settingsSaved": "सेटिंग्स सफलतापूर्वक सहेजी गईं",
+    "syncInterval": "सिंक अंतराल",
+    "minutes": "मिनट",
+    "actions": "क्रियाएं",
+    "syncNow": "अभी सिंक करें",
+    "clearResync": "साफ़ करें और फिर से सिंक करें",
+    "clearConfirm": "यह सभी कैश्ड एपिसोड और स्रोतों को हटा देगा, फिर फिर से प्राप्त करेगा। जारी रखें?",
+    "syncSuccess": "सिंक सफलतापूर्वक पूर्ण",
+    "clearSuccess": "डेटा साफ़ किया गया और सफलतापूर्वक फिर से सिंक किया गया",
+    "syncError": "सिंक विफल",
+    "apiEndpoints": "API एंडपॉइंट",
+    "apiEpisodes": "पॉडकास्ट एपिसोड सूचीबद्ध करें (limit, offset, source पैरामीटर समर्थित)",
+    "apiSources": "OPML से पॉडकास्ट स्रोत सूचीबद्ध करें (category पैरामीटर समर्थित)",
+    "apiStatus": "सिंक स्थिति और गणना"
+  }
+}

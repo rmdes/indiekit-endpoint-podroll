@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Podcast-abonnementen geaggregeerd vanuit FreshRSS",
+    "stats": "Statistieken",
+    "episodeCount": "Afleveringen",
+    "sourceCount": "Podcast-bronnen",
+    "lastEpisodesSync": "Laatste afleveringensynchronisatie",
+    "lastSourcesSync": "Laatste bronnensynchronisatie",
+    "never": "Nooit",
+    "configuration": "Feed-bronnen",
+    "configurationHelp": "URL's voor de podcast-gegevens die de /podroll-pagina aandrijven. Opgeslagen instellingen overschrijven omgevingsvariabelen.",
+    "episodesUrl": "Afleveringen JSON Feed URL",
+    "episodesUrlHelp": "FreshRSS greader API URL voor podcast-afleveringen",
+    "opmlUrl": "Abonnementen OPML URL",
+    "opmlUrlHelp": "OPML-export URL voor de zijbalk met podcast-abonnementen",
+    "saveSettings": "Instellingen opslaan",
+    "settingsSaved": "Instellingen succesvol opgeslagen",
+    "syncInterval": "Synchronisatie-interval",
+    "minutes": "minuten",
+    "actions": "Acties",
+    "syncNow": "Nu synchroniseren",
+    "clearResync": "Wissen en opnieuw synchroniseren",
+    "clearConfirm": "Dit zal alle opgeslagen afleveringen en bronnen verwijderen en vervolgens opnieuw ophalen. Doorgaan?",
+    "syncSuccess": "Synchronisatie succesvol voltooid",
+    "clearSuccess": "Gegevens gewist en succesvol opnieuw gesynchroniseerd",
+    "syncError": "Synchronisatie mislukt",
+    "apiEndpoints": "API-eindpunten",
+    "apiEpisodes": "Lijst podcast-afleveringen (ondersteunt limit, offset, source parameters)",
+    "apiSources": "Lijst podcast-bronnen uit OPML (ondersteunt category parameter)",
+    "apiStatus": "Synchronisatiestatus en aantallen"
+  }
+}

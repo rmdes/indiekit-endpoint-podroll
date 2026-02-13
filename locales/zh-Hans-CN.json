@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "从 FreshRSS 聚合的播客订阅",
+    "stats": "统计",
+    "episodeCount": "剧集",
+    "sourceCount": "播客来源",
+    "lastEpisodesSync": "上次剧集同步",
+    "lastSourcesSync": "上次来源同步",
+    "never": "从未",
+    "configuration": "订阅源来源",
+    "configurationHelp": "为 /podroll 页面提供播客数据的 URL。保存的设置会覆盖环境变量。",
+    "episodesUrl": "剧集 JSON 订阅源 URL",
+    "episodesUrlHelp": "FreshRSS greader API URL 用于播客剧集",
+    "opmlUrl": "订阅 OPML URL",
+    "opmlUrlHelp": "播客订阅侧边栏的 OPML 导出 URL",
+    "saveSettings": "保存设置",
+    "settingsSaved": "设置保存成功",
+    "syncInterval": "同步间隔",
+    "minutes": "分钟",
+    "actions": "操作",
+    "syncNow": "立即同步",
+    "clearResync": "清除并重新同步",
+    "clearConfirm": "这将删除所有缓存的剧集和来源,然后重新获取。继续?",
+    "syncSuccess": "同步成功完成",
+    "clearSuccess": "数据已清除并成功重新同步",
+    "syncError": "同步失败",
+    "apiEndpoints": "API 端点",
+    "apiEpisodes": "列出播客剧集(支持 limit、offset、source 参数)",
+    "apiSources": "列出 OPML 中的播客来源(支持 category 参数)",
+    "apiStatus": "同步状态和计数"
+  }
+}

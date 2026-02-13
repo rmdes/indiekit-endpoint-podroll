@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Langganan podcast yang dikumpulkan dari FreshRSS",
+    "stats": "Statistik",
+    "episodeCount": "Episode",
+    "sourceCount": "Sumber Podcast",
+    "lastEpisodesSync": "Sinkronisasi Episode Terakhir",
+    "lastSourcesSync": "Sinkronisasi Sumber Terakhir",
+    "never": "Tidak Pernah",
+    "configuration": "Sumber Feed",
+    "configurationHelp": "URL untuk data podcast yang menggerakkan halaman /podroll. Pengaturan yang disimpan menimpa variabel lingkungan.",
+    "episodesUrl": "URL Feed JSON Episode",
+    "episodesUrlHelp": "URL API greader FreshRSS untuk episode podcast",
+    "opmlUrl": "URL OPML Langganan",
+    "opmlUrlHelp": "URL ekspor OPML untuk sidebar langganan podcast",
+    "saveSettings": "Simpan Pengaturan",
+    "settingsSaved": "Pengaturan berhasil disimpan",
+    "syncInterval": "Interval Sinkronisasi",
+    "minutes": "menit",
+    "actions": "Tindakan",
+    "syncNow": "Sinkronkan Sekarang",
+    "clearResync": "Hapus & Sinkronkan Ulang",
+    "clearConfirm": "Ini akan menghapus semua episode dan sumber yang di-cache, lalu mengambilnya kembali. Lanjutkan?",
+    "syncSuccess": "Sinkronisasi selesai dengan sukses",
+    "clearSuccess": "Data dihapus dan berhasil disinkronkan ulang",
+    "syncError": "Sinkronisasi gagal",
+    "apiEndpoints": "Endpoint API",
+    "apiEpisodes": "Daftar episode podcast (mendukung parameter limit, offset, source)",
+    "apiSources": "Daftar sumber podcast dari OPML (mendukung parameter category)",
+    "apiStatus": "Status sinkronisasi dan jumlah"
+  }
+}

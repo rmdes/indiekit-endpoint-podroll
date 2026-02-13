@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Poddprenumerationer aggregerade från FreshRSS",
+    "stats": "Statistik",
+    "episodeCount": "Avsnitt",
+    "sourceCount": "Poddkällor",
+    "lastEpisodesSync": "Senaste avsnittsynkronisering",
+    "lastSourcesSync": "Senaste källsynkronisering",
+    "never": "Aldrig",
+    "configuration": "Flödeskällor",
+    "configurationHelp": "URL:er för podddata som driver /podroll-sidan. Sparade inställningar åsidosätter miljövariabler.",
+    "episodesUrl": "Avsnitt JSON-flödes-URL",
+    "episodesUrlHelp": "FreshRSS greader API-URL för poddavsnitt",
+    "opmlUrl": "Prenumerationer OPML-URL",
+    "opmlUrlHelp": "OPML-export-URL för sidofältet med poddprenumerationer",
+    "saveSettings": "Spara inställningar",
+    "settingsSaved": "Inställningar sparade",
+    "syncInterval": "Synkroniseringsintervall",
+    "minutes": "minuter",
+    "actions": "Åtgärder",
+    "syncNow": "Synkronisera nu",
+    "clearResync": "Rensa och synkronisera om",
+    "clearConfirm": "Detta kommer att radera alla cachade avsnitt och källor och sedan hämta dem igen. Fortsätta?",
+    "syncSuccess": "Synkronisering slutförd",
+    "clearSuccess": "Data rensad och omsynkroniserad",
+    "syncError": "Synkronisering misslyckades",
+    "apiEndpoints": "API-ändpunkter",
+    "apiEpisodes": "Lista poddavsnitt (stöder parametrarna limit, offset, source)",
+    "apiSources": "Lista poddkällor från OPML (stöder parametern category)",
+    "apiStatus": "Synkroniseringsstatus och räknare"
+  }
+}

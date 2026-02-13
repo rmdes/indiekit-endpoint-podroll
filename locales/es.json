@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Suscripciones de podcasts agregadas desde FreshRSS",
+    "stats": "Estadísticas",
+    "episodeCount": "Episodios",
+    "sourceCount": "Fuentes de podcasts",
+    "lastEpisodesSync": "Última sincronización de episodios",
+    "lastSourcesSync": "Última sincronización de fuentes",
+    "never": "Nunca",
+    "configuration": "Fuentes de feeds",
+    "configurationHelp": "URLs para los datos de podcasts que alimentan la página /podroll. La configuración guardada sobrescribe las variables de entorno.",
+    "episodesUrl": "URL del feed JSON de episodios",
+    "episodesUrlHelp": "URL de la API greader de FreshRSS para episodios de podcasts",
+    "opmlUrl": "URL OPML de suscripciones",
+    "opmlUrlHelp": "URL de exportación OPML para la barra lateral de suscripciones de podcasts",
+    "saveSettings": "Guardar configuración",
+    "settingsSaved": "Configuración guardada correctamente",
+    "syncInterval": "Intervalo de sincronización",
+    "minutes": "minutos",
+    "actions": "Acciones",
+    "syncNow": "Sincronizar ahora",
+    "clearResync": "Borrar y resincronizar",
+    "clearConfirm": "Esto eliminará todos los episodios y fuentes en caché, luego los volverá a obtener. ¿Continuar?",
+    "syncSuccess": "Sincronización completada correctamente",
+    "clearSuccess": "Datos borrados y resincronizados correctamente",
+    "syncError": "Error en la sincronización",
+    "apiEndpoints": "Endpoints de API",
+    "apiEpisodes": "Listar episodios de podcasts (admite parámetros limit, offset, source)",
+    "apiSources": "Listar fuentes de podcasts desde OPML (admite parámetro category)",
+    "apiStatus": "Estado de sincronización y conteos"
+  }
+}

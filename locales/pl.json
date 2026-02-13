@@ -1,0 +1,33 @@
+{
+  "podroll": {
+    "title": "Podroll",
+    "description": "Subskrypcje podcastów zagregowane z FreshRSS",
+    "stats": "Statystyki",
+    "episodeCount": "Odcinki",
+    "sourceCount": "Źródła podcastów",
+    "lastEpisodesSync": "Ostatnia synchronizacja odcinków",
+    "lastSourcesSync": "Ostatnia synchronizacja źródeł",
+    "never": "Nigdy",
+    "configuration": "Źródła kanałów",
+    "configurationHelp": "Adresy URL dla danych podcastów zasilających stronę /podroll. Zapisane ustawienia nadpisują zmienne środowiskowe.",
+    "episodesUrl": "Adres URL kanału JSON odcinków",
+    "episodesUrlHelp": "Adres URL API greader FreshRSS dla odcinków podcastów",
+    "opmlUrl": "Adres URL OPML subskrypcji",
+    "opmlUrlHelp": "Adres URL eksportu OPML dla paska bocznego subskrypcji podcastów",
+    "saveSettings": "Zapisz ustawienia",
+    "settingsSaved": "Ustawienia zapisane pomyślnie",
+    "syncInterval": "Interwał synchronizacji",
+    "minutes": "minuty",
+    "actions": "Działania",
+    "syncNow": "Synchronizuj teraz",
+    "clearResync": "Wyczyść i zsynchronizuj ponownie",
+    "clearConfirm": "Spowoduje to usunięcie wszystkich buforowanych odcinków i źródeł, a następnie ponowne ich pobranie. Kontynuować?",
+    "syncSuccess": "Synchronizacja zakończona pomyślnie",
+    "clearSuccess": "Dane wyczyszczone i pomyślnie zsynchronizowane ponownie",
+    "syncError": "Synchronizacja nie powiodła się",
+    "apiEndpoints": "Punkty końcowe API",
+    "apiEpisodes": "Wyświetl odcinki podcastów (obsługuje parametry limit, offset, source)",
+    "apiSources": "Wyświetl źródła podcastów z OPML (obsługuje parametr category)",
+    "apiStatus": "Status synchronizacji i liczniki"
+  }
+}
