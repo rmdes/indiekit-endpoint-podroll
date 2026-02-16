@@ -105,11 +105,12 @@ export default class PodrollEndpoint {
     // Store database getter for controller access
     Indiekit.config.application.getPodrollDb = () => Indiekit.database;
 
-    // Start background sync if database is available and URLs are configured
-    if (Indiekit.config.application.mongodbUrl && this.options.episodesUrl) {
+    // Start background sync if database is available
+    // Note: episodesUrl may be empty in env vars but configured via DB settings
+    // (saved from admin dashboard). startSync checks DB settings via
+    // getEffectiveSyncOptions before each sync run.
+    if (Indiekit.config.application.mongodbUrl) {
       startSync(Indiekit, this.options);
-    } else if (!this.options.episodesUrl) {
-      console.warn("[Podroll] No episodesUrl configured, sync disabled");
     }
   }
 }
