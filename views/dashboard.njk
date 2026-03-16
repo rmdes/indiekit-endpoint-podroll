@@ -26,7 +26,7 @@
   {# Configuration #}
   {% call section({ title: __("podroll.configuration") }) %}
     <p class="hint">{{ __("podroll.configurationHelp") }}</p>
-    <form method="post" action="{{ mountPath }}/settings" class="podroll-form">
+    <form method="post" action="{{ mountPath }}/settings" class="podroll-form" enctype="multipart/form-data">
       <div class="podroll-field">
         <label class="label" for="episodesUrl">{{ __("podroll.episodesUrl") }}</label>
         <span class="hint" id="episodesUrl-hint">{{ __("podroll.episodesUrlHelp") }}</span>
@@ -36,6 +36,20 @@
         <label class="label" for="opmlUrl">{{ __("podroll.opmlUrl") }}</label>
         <span class="hint" id="opmlUrl-hint">{{ __("podroll.opmlUrlHelp") }}</span>
         <input class="input" type="url" id="opmlUrl" name="opmlUrl" value="{{ config.opmlUrl }}" aria-describedby="opmlUrl-hint" placeholder="https://...">
+      </div>
+      <div class="podroll-field">
+        <label class="label" for="opmlFile">{{ __("podroll.opmlFile") }}</label>
+        <span class="hint" id="opmlFile-hint">{{ __("podroll.opmlFileHelp") }}</span>
+        <input class="input" type="file" id="opmlFile" name="opmlFile" accept=".opml,.xml,text/xml,application/xml" aria-describedby="opmlFile-hint">
+        {% if config.hasOpmlUpload %}
+        <p class="hint">{{ __("podroll.opmlFileActive") }}</p>
+        {% endif %}
+      </div>
+      <div class="podroll-field">
+        <label class="checkbox" for="clearOpmlFile">
+          <input type="checkbox" id="clearOpmlFile" name="clearOpmlFile" value="1">
+          {{ __("podroll.clearOpmlFile") }}
+        </label>
       </div>
       <dl class="podroll-field-static">
         <dt>{{ __("podroll.syncInterval") }}</dt>

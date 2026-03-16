@@ -28,6 +28,13 @@
     "apiEndpoints": "API Endpoints",
     "apiEpisodes": "List podcast episodes (supports limit, offset, source params)",
     "apiSources": "List podcast sources from OPML (supports category param)",
-    "apiStatus": "Sync status and counts"
+    "apiStatus": "Sync status and counts",
+    "opmlFile": "Upload OPML file",
+    "opmlFileHelp": "Upload an OPML file to sync podcast subscriptions without a remote OPML URL",
+    "opmlFileActive": "An uploaded OPML file is currently saved and will be used during source sync",
+    "clearOpmlFile": "Remove saved uploaded OPML file",
+    "opmlFileInvalidType": "Please upload an .opml or .xml file",
+    "opmlFileInvalidContent": "Uploaded file is not valid OPML content",
+    "opmlFileTooLarge": "Uploaded OPML file is too large (max 1 MB)"
   }
 }

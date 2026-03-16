@@ -21,6 +21,7 @@ const defaults = {
   // These should be overridden in config
   episodesUrl: "",
   opmlUrl: "",
+  opmlUpload: "",
 };
 
 export default class PodrollEndpoint {
