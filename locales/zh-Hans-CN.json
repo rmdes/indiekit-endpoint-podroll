@@ -28,6 +28,13 @@
     "apiEndpoints": "API 端点",
     "apiEpisodes": "列出播客剧集(支持 limit、offset、source 参数)",
     "apiSources": "列出 OPML 中的播客来源(支持 category 参数)",
-    "apiStatus": "同步状态和计数"
+    "apiStatus": "同步状态和计数",
+    "clearOpmlFile": "删除已保存的上传 OPML 文件",
+    "opmlFile": "上传 OPML 文件",
+    "opmlFileActive": "已上传的 OPML 文件当前已保存，将在来源同步时使用",
+    "opmlFileHelp": "上传 OPML 文件以在没有远程 OPML URL 的情况下同步播客订阅",
+    "opmlFileInvalidContent": "上传的文件不是有效的 OPML 内容",
+    "opmlFileInvalidType": "请上传 .opml 或 .xml 文件",
+    "opmlFileTooLarge": "上传的 OPML 文件过大（最大 1 MB）"
   }
 }

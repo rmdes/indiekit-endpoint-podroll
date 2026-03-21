@@ -28,6 +28,13 @@
     "apiEndpoints": "API एंडपॉइंट",
     "apiEpisodes": "पॉडकास्ट एपिसोड सूचीबद्ध करें (limit, offset, source पैरामीटर समर्थित)",
     "apiSources": "OPML से पॉडकास्ट स्रोत सूचीबद्ध करें (category पैरामीटर समर्थित)",
-    "apiStatus": "सिंक स्थिति और गणना"
+    "apiStatus": "सिंक स्थिति और गणना",
+    "clearOpmlFile": "सहेजी गई अपलोड की गई OPML फ़ाइल हटाएं",
+    "opmlFile": "OPML फ़ाइल अपलोड करें",
+    "opmlFileActive": "एक अपलोड की गई OPML फ़ाइल वर्तमान में सहेजी गई है और स्रोत सिंक के दौरान उपयोग की जाएगी",
+    "opmlFileHelp": "रिमोट OPML URL के बिना पॉडकास्ट सदस्यता सिंक करने के लिए एक OPML फ़ाइल अपलोड करें",
+    "opmlFileInvalidContent": "अपलोड की गई फ़ाइल मान्य OPML सामग्री नहीं है",
+    "opmlFileInvalidType": "कृपया .opml या .xml फ़ाइल अपलोड करें",
+    "opmlFileTooLarge": "अपलोड की गई OPML फ़ाइल बहुत बड़ी है (अधिकतम 1 MB)"
   }
 }

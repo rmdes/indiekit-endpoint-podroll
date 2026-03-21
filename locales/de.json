@@ -28,6 +28,13 @@
     "apiEndpoints": "API-Endpunkte",
     "apiEpisodes": "Podcast-Episoden auflisten (unterstützt limit, offset, source Parameter)",
     "apiSources": "Podcast-Quellen aus OPML auflisten (unterstützt category Parameter)",
-    "apiStatus": "Synchronisierungsstatus und Zählungen"
+    "apiStatus": "Synchronisierungsstatus und Zählungen",
+    "clearOpmlFile": "Gespeicherte hochgeladene OPML-Datei entfernen",
+    "opmlFile": "OPML-Datei hochladen",
+    "opmlFileActive": "Eine hochgeladene OPML-Datei ist derzeit gespeichert und wird bei der Quellensynchronisierung verwendet",
+    "opmlFileHelp": "Laden Sie eine OPML-Datei hoch, um Podcast-Abonnements ohne eine Remote-OPML-URL zu synchronisieren",
+    "opmlFileInvalidContent": "Die hochgeladene Datei enthält keinen gültigen OPML-Inhalt",
+    "opmlFileInvalidType": "Bitte laden Sie eine .opml- oder .xml-Datei hoch",
+    "opmlFileTooLarge": "Die hochgeladene OPML-Datei ist zu groß (max. 1 MB)"
   }
 }

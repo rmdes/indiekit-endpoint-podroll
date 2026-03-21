@@ -28,6 +28,13 @@
     "apiEndpoints": "Endpoints de API",
     "apiEpisodes": "Listar episódios de podcasts (suporta parâmetros limit, offset, source)",
     "apiSources": "Listar fontes de podcasts do OPML (suporta parâmetro category)",
-    "apiStatus": "Estado de sincronização e contagens"
+    "apiStatus": "Estado de sincronização e contagens",
+    "clearOpmlFile": "Remover ficheiro OPML carregado guardado",
+    "opmlFile": "Carregar ficheiro OPML",
+    "opmlFileActive": "Um ficheiro OPML carregado está guardado actualmente e será utilizado durante a sincronização de fontes",
+    "opmlFileHelp": "Carregue um ficheiro OPML para sincronizar subscrições de podcasts sem um URL OPML remoto",
+    "opmlFileInvalidContent": "O ficheiro carregado não contém conteúdo OPML válido",
+    "opmlFileInvalidType": "Carregue um ficheiro .opml ou .xml",
+    "opmlFileTooLarge": "O ficheiro OPML carregado é demasiado grande (máx. 1 MB)"
   }
 }

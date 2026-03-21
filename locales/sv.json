@@ -28,6 +28,13 @@
     "apiEndpoints": "API-ändpunkter",
     "apiEpisodes": "Lista poddavsnitt (stöder parametrarna limit, offset, source)",
     "apiSources": "Lista poddkällor från OPML (stöder parametern category)",
-    "apiStatus": "Synkroniseringsstatus och räknare"
+    "apiStatus": "Synkroniseringsstatus och räknare",
+    "clearOpmlFile": "Ta bort sparad uppladdad OPML-fil",
+    "opmlFile": "Ladda upp OPML-fil",
+    "opmlFileActive": "En uppladdad OPML-fil är för närvarande sparad och kommer att användas vid källsynkronisering",
+    "opmlFileHelp": "Ladda upp en OPML-fil för att synkronisera podcastprenumerationer utan en fjärr-OPML-URL",
+    "opmlFileInvalidContent": "Den uppladdade filen innehåller inte giltigt OPML-innehåll",
+    "opmlFileInvalidType": "Ladda upp en .opml- eller .xml-fil",
+    "opmlFileTooLarge": "Den uppladdade OPML-filen är för stor (max 1 MB)"
   }
 }

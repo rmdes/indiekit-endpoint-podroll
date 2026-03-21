@@ -28,6 +28,13 @@
     "apiEndpoints": "Points de terminaison API",
     "apiEpisodes": "Lister les épisodes de podcasts (prend en charge les paramètres limit, offset, source)",
     "apiSources": "Lister les sources de podcasts depuis OPML (prend en charge le paramètre category)",
-    "apiStatus": "État de synchronisation et comptages"
+    "apiStatus": "État de synchronisation et comptages",
+    "clearOpmlFile": "Supprimer le fichier OPML téléversé enregistré",
+    "opmlFile": "Téléverser un fichier OPML",
+    "opmlFileActive": "Un fichier OPML téléversé est actuellement enregistré et sera utilisé lors de la synchronisation des sources",
+    "opmlFileHelp": "Téléversez un fichier OPML pour synchroniser les abonnements de podcasts sans URL OPML distante",
+    "opmlFileInvalidContent": "Le fichier téléversé ne contient pas de contenu OPML valide",
+    "opmlFileInvalidType": "Veuillez téléverser un fichier .opml ou .xml",
+    "opmlFileTooLarge": "Le fichier OPML téléversé est trop volumineux (max 1 Mo)"
   }
 }

@@ -28,6 +28,13 @@
     "apiEndpoints": "API-eindpunten",
     "apiEpisodes": "Lijst podcast-afleveringen (ondersteunt limit, offset, source parameters)",
     "apiSources": "Lijst podcast-bronnen uit OPML (ondersteunt category parameter)",
-    "apiStatus": "Synchronisatiestatus en aantallen"
+    "apiStatus": "Synchronisatiestatus en aantallen",
+    "clearOpmlFile": "Opgeslagen geüploade OPML-bestand verwijderen",
+    "opmlFile": "OPML-bestand uploaden",
+    "opmlFileActive": "Een geüploade OPML-bestand is momenteel opgeslagen en wordt gebruikt tijdens de bronsynchronisatie",
+    "opmlFileHelp": "Upload een OPML-bestand om podcastabonnementen te synchroniseren zonder een externe OPML-URL",
+    "opmlFileInvalidContent": "Het geüploade bestand bevat geen geldige OPML-inhoud",
+    "opmlFileInvalidType": "Upload een .opml- of .xml-bestand",
+    "opmlFileTooLarge": "Het geüploade OPML-bestand is te groot (max 1 MB)"
   }
 }

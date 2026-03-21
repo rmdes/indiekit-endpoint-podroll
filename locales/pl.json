@@ -28,6 +28,13 @@
     "apiEndpoints": "Punkty końcowe API",
     "apiEpisodes": "Wyświetl odcinki podcastów (obsługuje parametry limit, offset, source)",
     "apiSources": "Wyświetl źródła podcastów z OPML (obsługuje parametr category)",
-    "apiStatus": "Status synchronizacji i liczniki"
+    "apiStatus": "Status synchronizacji i liczniki",
+    "clearOpmlFile": "Usuń zapisany przesłany plik OPML",
+    "opmlFile": "Prześlij plik OPML",
+    "opmlFileActive": "Przesłany plik OPML jest obecnie zapisany i będzie używany podczas synchronizacji źródeł",
+    "opmlFileHelp": "Prześlij plik OPML, aby synchronizować subskrypcje podcastów bez zdalnego URL OPML",
+    "opmlFileInvalidContent": "Przesłany plik nie zawiera prawidłowej zawartości OPML",
+    "opmlFileInvalidType": "Prześlij plik .opml lub .xml",
+    "opmlFileTooLarge": "Przesłany plik OPML jest za duży (maks. 1 MB)"
   }
 }

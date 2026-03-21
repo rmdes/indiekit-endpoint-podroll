@@ -28,6 +28,13 @@
     "apiEndpoints": "Endpoint API",
     "apiEpisodes": "Daftar episode podcast (mendukung parameter limit, offset, source)",
     "apiSources": "Daftar sumber podcast dari OPML (mendukung parameter category)",
-    "apiStatus": "Status sinkronisasi dan jumlah"
+    "apiStatus": "Status sinkronisasi dan jumlah",
+    "clearOpmlFile": "Hapus file OPML yang diunggah dan disimpan",
+    "opmlFile": "Unggah file OPML",
+    "opmlFileActive": "File OPML yang diunggah saat ini tersimpan dan akan digunakan selama sinkronisasi sumber",
+    "opmlFileHelp": "Unggah file OPML untuk menyinkronkan langganan podcast tanpa URL OPML jarak jauh",
+    "opmlFileInvalidContent": "File yang diunggah bukan konten OPML yang valid",
+    "opmlFileInvalidType": "Silakan unggah file .opml atau .xml",
+    "opmlFileTooLarge": "File OPML yang diunggah terlalu besar (maks 1 MB)"
   }
 }
