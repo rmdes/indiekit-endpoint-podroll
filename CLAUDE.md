@@ -674,6 +674,15 @@ curl "https://freshrss.example/api/query.php?user=USER&t=TOKEN&f=greader&nb=10"
 curl "https://freshrss.example/api/query.php?user=USER&t=TOKEN&f=opml"
 ```
 
+## Startup Gate
+
+This plugin uses `@rmdes/indiekit-startup-gate` to defer background tasks until the host signals readiness (after Eleventy build completes). This prevents resource contention during the build.
+
+**Deferred:** `startSync()` — periodic podcast episode sync
+**Immediate:** Routes, indexes, collection registration
+
+See workspace CLAUDE.md for the full startup-gate pattern. Any new background tasks added to this plugin MUST be wrapped in `waitForReady()`.
+
 ## Future Improvements
 
 - Episode search API (full-text search on titles/content)
