@@ -6,6 +6,7 @@ import { dashboardController } from "./lib/controllers/dashboard.js";
 import { episodesController } from "./lib/controllers/episodes.js";
 import { sourcesController } from "./lib/controllers/sources.js";
 import { startSync } from "./lib/sync.js";
+import { waitForReady } from "@rmdes/indiekit-startup-gate";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -111,7 +112,14 @@ export default class PodrollEndpoint {
     // (saved from admin dashboard). startSync checks DB settings via
     // getEffectiveSyncOptions before each sync run.
     if (Indiekit.config.application.mongodbUrl) {
-      startSync(Indiekit, this.options);
+      this._stopGate = waitForReady(
+        () => startSync(Indiekit, this.options),
+        { label: "Podroll" },
+      );
     }
+  }
+
+  destroy() {
+    this._stopGate?.();
   }
 }
